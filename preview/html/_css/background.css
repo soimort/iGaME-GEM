@@ -1,0 +1,189 @@
+
+body
+{
+	background-color: #000;
+	font-family: "Arial", sans-serif;
+	
+}
+
+/* Center the website */
+#mainwrapper
+{
+	width:920px;
+	margin:0 auto;
+}
+
+/* Give the header a height and a background image */
+#header
+{
+	height: 600px;
+	background: #000 url(../_images/background.jpg) repeat-y scroll left top;
+	text-align: center;
+}
+
+/* Vertically position header text and style it*/
+#header h1
+{
+	padding-top: 15px;
+	font-family: "Arial";
+	font-size: 18px;
+	font-variant: small-caps;
+	color: white;
+}
+
+/* Give basic styles to the body and the navigation */
+#body
+{
+	background-color: #000000;
+	height: 120px;
+}
+#nav
+{
+	height: 35px;
+	background-color: #515151;
+	color: black;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+/* Make sure your page contains a valid doctype at the top */
+#blackboard
+{
+	//CSS for Simple Gallery Example 1
+	position: relative; /*keep this intact*/
+	visibility: hidden; /*keep this intact*/
+	border: 5px solid #A66F00;
+	
+	//float:right;
+	//width: 33%;
+	left: 280px;
+	top: 50px;
+	z-index: 2;
+}
+
+#blackboard.gallerydesctext
+{
+	//CSS for description DIV of Example 1 (if defined)
+	text-align: left;
+	padding: 2px 5px;
+}
+
+img
+{
+	border: none;
+}
+.container
+{
+	//height: 360px;
+	//width: 910px;
+	//margin: -180px 0 0 -450px;
+	
+	position: relative;
+	top: -220px;
+	float: right;
+	
+}
+ul.thumb
+{
+	float: left;
+	list-style: none;
+	margin: 0; padding: 8px;
+	width: 160px;
+}
+ul.thumb li
+{
+	margin: 0; padding: 5px;
+	float: left;
+	position: relative;
+	width: 40px;
+	height: 40px;
+}
+ul.thumb li img
+{
+	width: 40px; height: 40px;
+	border: 1px solid #ddd;
+	padding: 0px;
+	background: #f0f0f0;
+	position: absolute;
+	left: 0; top: 0;
+	-ms-interpolation-mode: bicubic; 
+}
+ul.thumb li img.hover
+{
+	//background:url(thumb_bg.png) no-repeat center center;
+	border: none;
+}
+#main_view
+{
+	float: left;
+	padding: 0px 0;
+	margin-left: 0px;
+}
+
+
+
+#parts
+{
+	position: relative;
+	top: 50px;
+	left: 160px;
+	float: right;
+	margin-right: 10px;
+}
+
+
+
+/* modal window */
+
+div.modal
+{
+	position: absolute;
+	top: 80px;
+	width: 520px;
+	left: 240px;
+	border: solid 5px #909090;
+	padding: 20px;
+	background: #fff;
+	-webkit-box-shadow: 0px 3px 6px rgba(0,0,0,0.25);
+	opacity: 0.0;
+	-webkit-transition: opacity 0.0s ease-out;
+	z-index: -10;
+}
+
+div.modal.show
+{
+	opacity: 1.0;
+	z-index: 1000;
+	-webkit-transition-duration: 0.25s;
+}
+
+div.modal a.button { float: right; overflow: hidden; }
+
+
+
+/* lights off */
+
+div#lightOff
+{
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	position: fixed;
+	background-image: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(0, 0, 0);
+	z-index: -10;
+	opacity: 0.0;
+	background-position: initial initial;
+	background-repeat: initial initial;
+	
+}
+
+div#lightOff.show
+{
+	z-index: 999;
+	opacity: 0.8;
+}

@@ -1,0 +1,32 @@
+// this is an example
+
+function Level_1_1()
+{
+	Level[1][1] = true;
+	
+	Level_Name = "First Step to Syn Bio";
+	Level_Description = "";
+	
+	Slide_Title[0] = "1";
+	Slide_Title[1] = "2";
+	Slide_Title[2] = "3";
+	Slide_Title[3] = "";
+	Slide_Title[4] = "";
+	Slide_Image[0] = "_levels/_1_1/s1.png";
+	Slide_Image[1] = "_levels/_1_1/s2.png";
+	Slide_Image[2] = "_levels/_1_1/s3.png";
+	Slide_Image[3] = "_levels/_1_1/s4.png";
+	Slide_Image[4] = "_levels/_1_1/s5.png";
+	
+	Part_ID[0][0] = "BBa_J23100";
+	
+	Part_ID[1][0] = "BBa_B0030";
+	
+	Part_ID[2][0] = "BBa_B1001";
+	
+	Part_ID[4][0] = "BBa_E0040";
+	
+	Key[0] = "BBa_J23100BBa_B0030BBa_B1001BBa_E0040";
+	Points[0] = 100;
+	
+}

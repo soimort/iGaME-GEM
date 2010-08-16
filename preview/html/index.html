@@ -1,0 +1,1389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	
+	<head>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		
+		<meta name="description" content="An Educational Game for Synthetic Biology" />
+		<meta name="keywords" content=", synthetic biology, educational game, educational software, iGEM, USTC, " />
+		<meta name="author" content="soimort" />
+		<meta name="copyright" content="Copyright (c) 2010 iGEM USTC Software" />
+		
+		<title>iGaME Web Preview</title>
+		
+		<link rel="icon" type="image/x-icon" href="_images/favicon.ico" />
+		
+		
+		
+		<!-- level scripts -->
+		
+		<script type="text/javascript" src="_levels/_0_0/level.script"></script>
+		
+		<script type="text/javascript" src="_levels/_1_1/level.script"></script>
+		<script type="text/javascript" src="_levels/_1_2/level.script"></script>
+		<script type="text/javascript" src="_levels/_1_3/level.script"></script>
+		<script type="text/javascript" src="_levels/_1_4/level.script"></script>
+		<script type="text/javascript" src="_levels/_1_5/level.script"></script>
+		<script type="text/javascript" src="_levels/_1_6/level.script"></script>
+		<script type="text/javascript" src="_levels/_1_7/level.script"></script>
+		<script type="text/javascript" src="_levels/_1_8/level.script"></script>
+		
+		<script type="text/javascript" src="_levels/_2_1/level.script"></script>
+		<script type="text/javascript" src="_levels/_2_2/level.script"></script>
+		<script type="text/javascript" src="_levels/_2_3/level.script"></script>
+		<script type="text/javascript" src="_levels/_2_4/level.script"></script>
+		<script type="text/javascript" src="_levels/_2_5/level.script"></script>
+		<script type="text/javascript" src="_levels/_2_6/level.script"></script>
+		<script type="text/javascript" src="_levels/_2_7/level.script"></script>
+		<script type="text/javascript" src="_levels/_2_8/level.script"></script>
+		
+		<script type="text/javascript" src="_levels/_3_1/level.script"></script>
+		<script type="text/javascript" src="_levels/_3_2/level.script"></script>
+		<script type="text/javascript" src="_levels/_3_3/level.script"></script>
+		<script type="text/javascript" src="_levels/_3_4/level.script"></script>
+		<script type="text/javascript" src="_levels/_3_5/level.script"></script>
+		<script type="text/javascript" src="_levels/_3_6/level.script"></script>
+		<script type="text/javascript" src="_levels/_3_7/level.script"></script>
+		<script type="text/javascript" src="_levels/_3_8/level.script"></script>
+		
+		<script type="text/javascript" src="_levels/_4_1/level.script"></script>
+		<script type="text/javascript" src="_levels/_4_2/level.script"></script>
+		<script type="text/javascript" src="_levels/_4_3/level.script"></script>
+		<script type="text/javascript" src="_levels/_4_4/level.script"></script>
+		<script type="text/javascript" src="_levels/_4_5/level.script"></script>
+		<script type="text/javascript" src="_levels/_4_6/level.script"></script>
+		<script type="text/javascript" src="_levels/_4_7/level.script"></script>
+		<script type="text/javascript" src="_levels/_4_8/level.script"></script>
+		
+		<script type="text/javascript" src="_levels/_5_1/level.script"></script>
+		<script type="text/javascript" src="_levels/_5_2/level.script"></script>
+		<script type="text/javascript" src="_levels/_5_3/level.script"></script>
+		<script type="text/javascript" src="_levels/_5_4/level.script"></script>
+		<script type="text/javascript" src="_levels/_5_5/level.script"></script>
+		<script type="text/javascript" src="_levels/_5_6/level.script"></script>
+		<script type="text/javascript" src="_levels/_5_7/level.script"></script>
+		<script type="text/javascript" src="_levels/_5_8/level.script"></script>
+		
+		
+		
+		<!-- blackboard effect -->
+		
+		<script type="text/javascript" src="_scripts/jquery-1.2.6.pack.js"></script>
+		
+		<script type="text/javascript" src="_scripts/simplegallery.js">
+			
+			/***********************************************
+			* Simple Controls Gallery- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+			* This notice MUST stay intact for legal use
+			* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+			***********************************************/
+			
+		</script>
+		
+		<script type="text/javascript">
+			
+			function refreshGallery() {
+				mygallery=new simpleGallery({
+					wrapperid: "blackboard", //ID of main gallery container,
+					dimensions: [350, 200], //width/height of gallery in pixels. Should reflect dimensions of the images exactly
+					imagearray: [
+						[Slide_Image[0], Slide_Image[0], "_new", Slide_Title[0]],
+						[Slide_Image[1], Slide_Image[1], "", Slide_Title[1]],
+						[Slide_Image[2], Slide_Image[2], "", Slide_Title[2]],
+						[Slide_Image[3], Slide_Image[3], "", Slide_Title[3]],
+						[Slide_Image[4], Slide_Image[4], "", Slide_Title[4]]
+						
+					],
+					autoplay: [true, 5000, 2], //[auto_play_boolean, delay_btw_slide_millisec, cycles_before_stopping_int]
+					persist: false, //remember last viewed slide and recall within same session?
+					fadeduration: 1000, //transition duration (milliseconds)
+					oninit:function(){ //event that fires when gallery has initialized/ ready to run
+						//Keyword "this": references current gallery instance (ie: try this.navigate("play/pause"))
+					},
+					onslide:function(curslide, i){ //event that fires after each slide is shown
+						//Keyword "this": references current gallery instance
+						//curslide: returns DOM reference to current slide's DIV (ie: try alert(curslide.innerHTML)
+						//i: integer reflecting current image within collection being shown (0=1st image, 1=2nd etc)
+					}
+				})
+			}
+			
+		</script>
+		
+		
+		
+		<!-- main program -->
+		
+		<script type="text/javascript">
+		
+			function changeParts(i) {
+				
+				switch(i)
+				{
+					case '1':
+						$("#main_view img").attr({src: "_images/part1_full.jpg"}); break;
+					case '2':
+						$("#main_view img").attr({src: "_images/part2_full.jpg"}); break;
+					case '3':
+						$("#main_view img").attr({src: "_images/part3_full.jpg"}); break;
+					case '4':
+						$("#main_view img").attr({src: "_images/part4_full.jpg"}); break;
+					case '5':
+						$("#main_view img").attr({src: "_images/part5_full.jpg"}); break;
+					case '6':
+						$("#main_view img").attr({src: "_images/part6_full.jpg"}); break;
+					case '7':
+						$("#main_view img").attr({src: "_images/part7_full.jpg"}); break;
+					case '8':
+						$("#main_view img").attr({src: "_images/part8_full.jpg"}); break;
+					case '9':
+						$("#main_view img").attr({src: "_images/part9_full.jpg"}); break;
+				}
+				
+				for(ii = 0; ii <= 8; ii++)
+				{
+					for(jj = 0; jj <= 7; jj++)
+					{
+						if(document.getElementById('p'+(ii*8+jj+1)))
+						{
+							f = false;
+							for(ff = 1; ff <= 16; ff++)
+								if(workspace.childNodes.item(ff))
+									if(workspace.childNodes.item(ff).innerHTML == document.getElementById('p'+(ii*8+jj+1)).innerHTML)
+										f = true;
+							
+							if(!f)
+							{
+								document.getElementById('p'+(ii*8+jj+1)).innerHTML="";
+								document.getElementById('p'+(ii*8+jj+1)).style.height = "0em";
+								document.getElementById('p'+(ii*8+jj+1)).style.padding = "0em";
+							}
+						}
+					}
+				}
+				
+				for(w = 1; w <= 8; w++)
+				{
+					if(Part_ID[i-1][w-1])
+					{
+						document.getElementById('p'+((i-1)*8+w)).innerHTML = Part_ID[i-1][w-1];
+						document.getElementById('p'+((i-1)*8+w)).style.height = ".8em";
+						document.getElementById('p'+((i-1)*8+w)).style.padding = ".4em";
+					}
+					else
+					{
+						document.getElementById('p'+((i-1)*8+w)).style.height = "0em";
+						document.getElementById('p'+((i-1)*8+w)).style.padding = "0em";
+					}
+				}
+				
+			};
+			
+		</script>
+		
+		<script type="text/javascript">
+			
+			function cheatIt() {
+				
+				var temp = prompt("sup bro?");
+				
+				if(temp == "BEEF_EXTRACT")
+				{
+					sum += 1000;
+					document.getElementById("score").innerHTML = sum;
+				}
+				
+				else if(temp == "ZERO_ZERO")
+				{
+					penalty = 0;
+					document.getElementById("level").innerHTML == "0 - 0";
+					if(Level[0][0]) Level_0_0();
+					$("#closeRun").click();
+				}
+				
+				else if(temp == "CCAV")
+				{
+					confirm("Oops, CCAV, that's it!");
+					sum = 0;
+					document.getElementById("score").innerHTML = sum;
+				}
+				
+				else if(temp == "SOIMORT")
+				{
+					penalty = 0;
+					$("#closeRun").click();
+				}
+				
+				else if(temp == "DR_DING")
+				{
+					alert("Listen up dude, here's the answer:\n" + Key[0]);
+				}
+				
+			};
+			
+			
+			
+			// detect browser!
+			var Sys = {};
+			var ua = navigator.userAgent.toLowerCase();
+			if (window.ActiveXObject)
+				Sys.ie = ua.match(/msie ([\d.]+)/)[1]
+			else if (document.getBoxObjectFor)
+				Sys.firefox = ua.match(/firefox\/([\d.]+)/)[1]
+			else if (window.MessageEvent && !document.getBoxObjectFor)
+				Sys.chrome = ua.match(/chrome\/([\d.]+)/)[1]
+			else if (window.opera)
+				Sys.opera = ua.match(/opera.([\d.]+)/)[1]
+			else if (window.openDatabase)
+				Sys.safari = ua.match(/version\/([\d.]+)/)[1];
+			if(Sys.ie)
+			{
+				alert("Sorry, but this application does not work well with your IE browser right now. It is highly recommended that you use a Google Chrome browser instead :)");
+				
+				window.location.replace("http://www.google.com/chrome/");
+			}
+			else if(Sys.firefox)
+			{
+				alert("Notice: this application has not been fully tested on Firefox. You may need a WebKit-based browser (Chrome or Safari) if you encountered any puzzling problems :)");
+			}
+			else if(Sys.opera)
+			{
+				alert("Notice: this application has not been fully tested on Opera. You may need a WebKit-based browser (Chrome or Safari) if you encountered any puzzling problems :)");
+			}
+			
+			
+			
+			// define variables
+			var Level_Name, Level_Description, Level_BackgroundImage,
+				Part_ID = new Array(new Array(8), new Array(8), new Array(8),
+									new Array(8), new Array(8), new Array(8),
+									new Array(8), new Array(8), new Array(8)),
+				Part_Name = new Array(new Array(8), new Array(8), new Array(8),
+									new Array(8), new Array(8), new Array(8),
+									new Array(8), new Array(8), new Array(8)),
+				Part_Description = new Array(new Array(8), new Array(8), new Array(8),
+									new Array(8), new Array(8), new Array(8),
+									new Array(8), new Array(8), new Array(8)),
+				Part_Sequence = new Array(new Array(8), new Array(8), new Array(8),
+									new Array(8), new Array(8), new Array(8),
+									new Array(8), new Array(8), new Array(8)),
+				Slide_Title = new Array(5),
+				Slide_Image = new Array(5),
+				Key = new Array(5),
+				Points = new Array(5);
+			var sum = 0, penalty = 0,
+				Level = new Array(new Array(9), new Array(9), new Array(9),
+									new Array(9), new Array(9), new Array(9),
+									new Array(9), new Array(9), new Array(9));
+			for(bx = 0; bx < 9; bx++)
+				for(by = 0; by < 9; by++)
+					Level[bx][by] = false;
+			var mygallery;
+			
+			
+			
+			// load first level
+			Level_1_1();
+			refreshGallery();
+			//changeParts(1);
+			//document.getElementById("mission").innerHTML = Level_Name + "<br/>" + Level_Description;
+			
+			
+			
+		</script>
+		
+		
+		
+		<!-- background effect -->
+		
+		<link rel="stylesheet" type="text/css" href="_css/background.css" />
+		
+		<script type="text/javascript" src="_scripts/jquery.min.js"></script>
+		
+		<script type="text/javascript">
+			
+				var scrollSpeed = 70; 		// Speed in milliseconds
+				var step = 1; 				// How many pixels to move per step
+				var current = 0;			// The current pixel row
+				var imageHeight = 4300;		// Background image height
+				var headerHeight = 300;		// How tall the header is.
+				
+				//The pixel row where to start a new loop
+				var restartPosition = -(imageHeight - headerHeight);
+				
+				function scrollBg(){
+					
+					//Go to next pixel row.
+					current -= step;
+					
+					//If at the end of the image, then go to the top.
+					if (current == restartPosition){
+						current = 0;
+					}
+					
+					//Set the CSS of the header.
+					$('#header').css("background-position", "0 " + current + "px");
+					
+				}
+				
+				//Calls the scrolling function repeatedly
+				var init = setInterval("scrollBg()", scrollSpeed);
+				
+		</script>
+		
+		<!-- parts index effect -->
+		
+		<script type="text/javascript" src="_scripts/jquery-latest.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function(){
+			
+			//Larger thumbnail preview
+			 
+			$("ul.thumb li").hover(function() {
+				$(this).css({'z-index' : '10'});
+				$(this).find('img').addClass("hover").stop()
+					.animate({
+						marginTop: '-20px', 
+						marginLeft: '-20px', 
+						top: '0%',
+						left: '0%',
+						width: '80px',
+						height: '80px',
+						padding: '0px' 
+					}, 200);
+				
+				} , function() {
+				$(this).css({'z-index' : '0'});
+				$(this).find('img').removeClass("hover").stop()
+					.animate({
+						marginTop: '0', 
+						marginLeft: '0',
+						top: '0', 
+						left: '0', 
+						width: '40px', 
+						height: '40px', 
+						padding: '0px'
+					}, 400);
+			});
+			 
+			//Swap Image on Click
+				$("ul.thumb li a").click(function() {
+					
+					var mainImage = $(this).attr("href"); //Find Image Name
+					$("#main_view img").attr({ src: mainImage });
+					return false;
+				});
+			 
+			});
+		</script>
+		
+		<!-- parts table effect -->
+		
+		<link rel="stylesheet" type="text/css" href="_css/permission.css" />
+		
+		<script type="text/javascript" src="_scripts/EventHelpers.js"></script>
+		
+		<script type="text/javascript" src="_scripts/DragDropHelpers.js"></script>
+		
+		<script type="text/javascript" src="_scripts/permissionForm.js"></script>
+		
+		<!-- main menu effect -->
+		
+		<link rel="stylesheet" type="text/css" href="_css/mainmenu.css" />
+		
+		<script type="text/javascript" src="_scripts/jquery-1.3.2.min.js"></script> 
+		
+		<script type="text/javascript">
+			$(function() {
+			
+			  //remove js-disabled class
+				$("#viewer").removeClass("js-disabled");
+			
+			  //create new container for images
+				$("<div>").attr("id", "container").css({ position:"absolute"}).width($(".wrapper").length * 170).height(170).appendTo("div#viewer");
+			  	
+				//add images to container
+				$(".wrapper").each(function() {
+					$(this).appendTo("div#container");
+				});
+				
+				//work out duration of anim based on number of images (1 second for each image)
+				var duration = $(".wrapper").length * 2000;
+				
+				//store speed for later (distance / time)
+				var speed = (parseInt($("div#container").width()) + parseInt($("div#viewer").width())) / duration;
+								
+				//set direction
+				var direction = "rtl";
+				
+				//set initial position and class based on direction
+				(direction == "rtl") ? $("div#container").css("left", $("div#viewer").width()).addClass("rtl") : $("div#container").css("left", 0 - $("div#container").width()).addClass("ltr") ;
+				
+				//animator function
+				var animator = function(el, time, dir) {
+				 
+					//which direction to scroll
+					if(dir == "rtl") {
+					  
+					  //add direction class
+						el.removeClass("ltr").addClass("rtl");
+					 		
+						//animate the el
+						el.animate({ left:"-" + el.width() + "px" }, time, "linear", function() {
+												
+							//reset container position
+							$(this).css({ left:$("div#imageScroller").width(), right:"" });
+							
+							//restart animation
+							animator($(this), duration, "rtl");
+							
+							//hide controls if visible
+							($("div#controls").length > 0) ? $("div#controls").slideUp("slow").remove() : null ;			
+											
+						});
+					} else {
+					
+					  //add direction class
+						el.removeClass("rtl").addClass("ltr");
+					
+						//animate the el
+						el.animate({ left:$("div#viewer").width() + "px" }, time, "linear", function() {
+												
+							//reset container position
+							$(this).css({ left:0 - $("div#container").width() });
+							
+							//restart animation
+							animator($(this), duration, "ltr");
+							
+							//hide controls if visible
+							($("div#controls").length > 0) ? $("div#controls").slideUp("slow").remove() : null ;			
+						});
+					}
+				}
+				
+				//start anim
+				animator($("div#container"), duration, direction);
+				
+				//pause on mouseover
+				$("a.wrapper").live("mouseover", function() {
+				  
+					//stop anim
+					$("div#container").stop(true);
+					
+					//show controls
+					($("div#controls").length == 0) ? $("<div>").attr("id", "controls").appendTo("div#outerContainer").css({ opacity:0.7 }).slideDown("slow") : null ;
+					($("a#rtl").length == 0) ? $("<a>").attr({ id:"rtl", href:"#", title:"rtl" }).appendTo("#controls") : null ;
+					($("a#ltr").length == 0) ? $("<a>").attr({ id:"ltr", href:"#", title:"ltr" }).appendTo("#controls") : null ;
+					
+					//variable to hold trigger element
+					var title = $(this).attr("title");
+					
+					//add p if doesn't exist, update it if it does
+					($("p#title").length == 0) ? $("<p>").attr("id", "title").text(title).appendTo("div#controls") : $("p#title").text(title) ;
+				});
+				
+				//restart on mouseout
+				$("a.wrapper").live("mouseout", function(e) {
+				  
+					//hide controls if not hovering on them
+					(e.relatedTarget == null) ? null : (e.relatedTarget.id != "controls") ? $("div#controls").slideUp("slow").remove() : null ;
+					
+					//work out total travel distance
+					var totalDistance = parseInt($("div#container").width()) + parseInt($("div#viewer").width());
+														
+					//work out distance left to travel
+					var distanceLeft = ($("div#container").hasClass("ltr")) ? totalDistance - (parseInt($("div#container").css("left")) + parseInt($("div#container").width())) : totalDistance - (parseInt($("div#viewer").width()) - (parseInt($("div#container").css("left")))) ;
+					
+					//new duration is distance left / speed)
+					var newDuration = distanceLeft / speed;
+				
+					//restart anim
+					animator($("div#container"), newDuration, $("div#container").attr("class"));
+ 
+				});
+												
+				//handler for ltr button
+				$("#ltr").live("click", function() {
+				 					
+					//stop anim
+					$("div#container").stop(true);
+				
+					//swap class names
+					$("div#container").removeClass("rtl").addClass("ltr");
+										
+					//work out total travel distance
+					var totalDistance = parseInt($("div#container").width()) + parseInt($("div#viewer").width());
+					
+					//work out remaining distance
+					var distanceLeft = totalDistance - (parseInt($("div#container").css("left")) + parseInt($("div#container").width()));
+					
+					//new duration is distance left / speed)
+					var newDuration = distanceLeft / speed;
+					
+					//restart anim
+					animator($("div#container"), newDuration, "ltr");
+				});
+				
+				//handler for rtl button
+				$("#rtl").live("click", function() {
+										
+					//stop anim
+					$("div#container").stop(true);
+					
+					//swap class names
+					$("div#container").removeClass("ltr").addClass("rtl");
+					
+					//work out total travel distance
+					var totalDistance = parseInt($("div#container").width()) + parseInt($("div#viewer").width());
+ 
+					//work out remaining distance
+					var distanceLeft = totalDistance - (parseInt($("div#viewer").width()) - (parseInt($("div#container").css("left"))));
+					
+					//new duration is distance left / speed)
+					var newDuration = distanceLeft / speed;
+				
+					//restart anim
+					animator($("div#container"), newDuration, "rtl");
+				});
+			});
+		</script>
+		
+		<!-- nav & menu actions -->
+		
+		<script type="text/javascript" src="_scripts/jquery.js"></script>
+		
+		<script type="text/javascript">
+			
+			$(document).ready(function(){
+				
+				$("#showHelp").click(function() {
+					$("div#helpModal").addClass("show");
+					$("div#lightOff").addClass("show");
+					return false;
+				});
+				
+				$("#closeHelp").click(function() {
+					$("div#helpModal").removeClass("show");
+					$("div#lightOff").removeClass("show");
+					return false;
+				});
+				
+				$("#showClear").click(function() {
+					if(confirm("Are you sure you want to clear your workbench?"))
+					{
+						while(workspace.hasChildNodes())
+							repository.appendChild(workspace.firstChild);
+							
+						$("#promoters").click();
+					}
+					return false;
+				});
+				
+				$("#closeClear").click(function() {
+					
+					return false;
+				});
+				
+				$("#showShow").click(function() {
+					$("div#showModal").addClass("show");
+					$("div#lightOff").addClass("show");
+					return false;
+				});
+				
+				$("#closeShow").click(function() {
+					$("div#showModal").removeClass("show");
+					$("div#lightOff").removeClass("show");
+					return false;
+				});
+				
+				$("#showRun").click(function() {
+					$("div#runModal").addClass("show");
+					$("div#lightOff").addClass("show");
+					
+					tmp = "";
+					for(c = 1; c <= 16; c++)
+						if(workspace.childNodes.item(c))
+							tmp += workspace.childNodes.item(c).innerHTML;
+					
+					if(Key[0] && tmp == Key[0])
+					{
+						if(Points[0] - penalty > 10)
+							sum += Points[0] - penalty;
+						else
+							sum += 10;
+						penalty = 0;
+					}
+					else if(Key[1] && tmp == Key[1])
+					{
+						if(Points[1] - penalty > 10)
+							sum += Points[1] - penalty;
+						else
+							sum += 10;
+						penalty = 0;
+					}
+					else if(Key[2] && tmp == Key[2])
+					{
+						if(Points[2] - penalty > 10)
+							sum += Points[2] - penalty;
+						else
+							sum += 10;
+						penalty = 0;
+					}
+					else if(Key[3] && tmp == Key[3])
+					{
+						if(Points[3] - penalty > 10)
+							sum += Points[3] - penalty;
+						else
+							sum += 10;
+						penalty = 0;
+					}
+					else if(Key[4] && tmp == Key[4])
+					{
+						if(Points[4] - penalty > 10)
+							sum += Points[4] - penalty;
+						else
+							sum += 10;
+						penalty = 0;
+					}
+					else
+						penalty += 10;
+					
+					if(penalty)
+					{
+						document.getElementById("labTitle").innerHTML = "It seems that your GEM did not work well. Try to improve your design, good luck!";
+						document.getElementById("labImg").innerHTML = "<img src='_images/result_bad.png' /><br/>";
+					}
+					else
+					{
+						document.getElementById("labTitle").innerHTML = "Congratulations! Your GEM works perfectly. Now go on to the next mission.";
+						document.getElementById("labImg").innerHTML = "<img src='_images/result_good.png' /><br/>";
+						
+						document.getElementById("score").innerHTML = sum;
+					}
+					
+					return false;
+				});
+				
+				$("#closeRun").click(function() {
+					
+					$("div#runModal").removeClass("show");
+					$("div#lightOff").removeClass("show");
+					
+					if(penalty)
+					{
+						;
+					}
+					else
+					{
+						
+						if(document.getElementById("level").innerHTML == "1 - 1") {
+							if(Level[1][2]) Level_1_2();
+							else alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						else if(document.getElementById("level").innerHTML == "1 - 2") {
+							if(Level[1][3]) Level_1_3();
+							else alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						else if(document.getElementById("level").innerHTML == "1 - 3") {
+							if(Level[1][4]) Level_1_4();
+							else alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						else if(document.getElementById("level").innerHTML == "1 - 4") {
+							if(Level[1][5]) Level_1_5();
+							else alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						else if(document.getElementById("level").innerHTML == "1 - 5") {
+							if(Level[1][6]) Level_1_6();
+							else alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						else if(document.getElementById("level").innerHTML == "1 - 6") {
+							if(Level[1][7]) Level_1_7();
+							else alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						else if(document.getElementById("level").innerHTML == "1 - 7") {
+							if(Level[1][8]) Level_1_8();
+							else alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						else if(document.getElementById("level").innerHTML == "1 - 8") {
+							if(Level[2][1]) Level_2_1();
+							else alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						
+						else if(document.getElementById("level").innerHTML == "2 - 1") {
+							if(Level[2][2]) Level_2_2();
+							else alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						else if(document.getElementById("level").innerHTML == "2 - 2") {
+							if(Level[2][3]) Level_2_3();
+							else alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						else if(document.getElementById("level").innerHTML == "2 - 3") {
+							if(Level[2][4]) Level_2_4();
+							else alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						else if(document.getElementById("level").innerHTML == "2 - 4") {
+							if(Level[2][5]) Level_2_5();
+							else alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						else if(document.getElementById("level").innerHTML == "2 - 5") {
+							if(Level[2][6]) Level_2_6();
+							else alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						else if(document.getElementById("level").innerHTML == "2 - 6") {
+							if(Level[2][7]) Level_2_7();
+							else alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						else if(document.getElementById("level").innerHTML == "2 - 7") {
+							if(Level[2][8]) Level_2_8();
+							else alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						else if(document.getElementById("level").innerHTML == "2 - 8") {
+							if(Level[3][1]) Level_3_1();
+							else alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						
+						else if(document.getElementById("level").innerHTML == "3 - 1") {
+							if(Level[3][2]) Level_3_2();
+							else alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						else if(document.getElementById("level").innerHTML == "3 - 2") {
+							if(Level[3][3]) Level_3_3();
+							else alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						else if(document.getElementById("level").innerHTML == "3 - 3") {
+							if(Level[3][4]) Level_3_4();
+							else alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						else if(document.getElementById("level").innerHTML == "3 - 4") {
+							if(Level[3][5]) Level_3_5();
+							else alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						else if(document.getElementById("level").innerHTML == "3 - 5") {
+							if(Level[3][6]) Level_3_6();
+							else alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						else if(document.getElementById("level").innerHTML == "3 - 6") {
+							if(Level[3][7]) Level_3_7();
+							else alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						else if(document.getElementById("level").innerHTML == "3 - 7") {
+							if(Level[3][8]) Level_3_8();
+							else alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						else if(document.getElementById("level").innerHTML == "3 - 8") {
+							if(Level[4][1]) Level_4_1();
+							else alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						else if(document.getElementById("level").innerHTML != "0 - 0")
+						{
+							alert("You have just completed all available missions in Alpha version. If you are interested in this game, feel free to contact us!");
+						}
+						
+						refreshGallery();
+						
+						document.getElementById("mission").innerHTML = Level_Name + "<br/>" + Level_Description; 
+						
+						// clear workspace
+						while(workspace.hasChildNodes())
+							repository.appendChild(workspace.firstChild);
+						
+						changeParts(1);
+					}
+					
+					return false;
+				});
+				
+				
+				
+				$("#showRestart").click(function() {
+					
+					window.location.reload();
+					
+					return false;
+				});
+				
+				$("#closeRestart").click(function() {
+					$("div#restartModal").removeClass("show");
+					$("div#lightOff").removeClass("show");
+					return false;
+				});
+				
+				$("#showSurvey").click(function() {
+					$("div#surveyModal").addClass("show");
+					$("div#lightOff").addClass("show");
+					return false;
+				});
+				
+				$("#closeSurvey").click(function() {
+					$("div#surveyModal").removeClass("show");
+					$("div#lightOff").removeClass("show");
+					return false;
+				});
+				
+				$("#showFuture").click(function() {
+					$("div#futureModal").addClass("show");
+					$("div#lightOff").addClass("show");
+					return false;
+				});
+				
+				$("#closeFuture").click(function() {
+					$("div#futureModal").removeClass("show");
+					$("div#lightOff").removeClass("show");
+					return false;
+				});
+				
+				$("#showAbout").click(function() {
+					$("div#aboutModal").addClass("show");
+					$("div#lightOff").addClass("show");
+					return false;
+				});
+				
+				$("#closeAbout").click(function() {
+					$("div#aboutModal").removeClass("show");
+					$("div#lightOff").removeClass("show");
+					return false;
+				});
+				
+				$("#showExit").click(function() {
+					if(confirm("Are you sure you want to exit?"))
+					{
+						window.location.replace("http://2010.igem.org/Team:USTC_Software");
+						window.close();
+					}
+					return false;
+				});
+				
+				$("#closeExit").click(function() {
+					
+					return false;
+				});
+				
+			});
+			
+		</script>
+		
+		
+		
+	</head>
+	
+	
+	
+	<body alink="black" vlink="black"
+	onLoad="$('div#restartModal').addClass('show'); $('div#lightOff').addClass('show');"
+	onKeyDown="if(event.keyCode==123) cheatIt();
+	
+	else if(event.keyCode==80 & event.shiftKey) $('#showSurvey').click();
+	else if(event.keyCode==70 & event.shiftKey) $('#showFuture').click();
+	else if(event.keyCode==65 & event.shiftKey) $('#showAbout').click();
+	else if(event.keyCode==27) $('#showExit').click();
+	
+	else if(event.keyCode==72 & event.shiftKey) $('#showHelp').click();
+	else if(event.keyCode==46) $('#showClear').click();
+	else if(event.keyCode==9 & event.shiftKey) $('#showShow').click();
+	else if(event.keyCode==32) $('#showRun').click();
+	
+	else if(event.keyCode > 48 & event.keyCode < 57 & event.shiftKey)
+	{
+		
+		k = event.keyCode - 48;
+		i = 0;
+		while(k && i < 100)
+		{
+			i++;
+			if(repository.childNodes.item(i))
+				if(repository.childNodes.item(i).innerHTML) k--;
+		}
+		
+		workspace.appendChild(repository.childNodes.item(i));
+		// repository.removeChild(repository.childNodes.item(i));
+		
+	}
+	
+	else if(event.keyCode > 48 & event.keyCode < 57 & event.altKey)
+	{
+		
+		k = event.keyCode - 48;
+		i = 0;
+		while(k && i < 100)
+		{
+			i++;
+			if(workspace.childNodes.item(i))
+				if(workspace.childNodes.item(i).innerHTML) k--;
+		}
+		
+		repository.appendChild(workspace.childNodes.item(i));
+		// workspace.removeChild(workspace.childNodes.item(i));
+		
+	}
+	
+	else if(event.keyCode==49) changeParts('1');
+	else if(event.keyCode==50) changeParts('2');
+	else if(event.keyCode==51) changeParts('3');
+	else if(event.keyCode==52) changeParts('4');
+	else if(event.keyCode==53) changeParts('5');
+	else if(event.keyCode==54) changeParts('6');
+	else if(event.keyCode==55) changeParts('7');
+	else if(event.keyCode==56) changeParts('8');
+	else if(event.keyCode==57) changeParts('9');
+	
+	else if(event.keyCode==13)
+	{
+		if($('div#restartModal').hasClass('show')) $('#closeRestart').click();
+		if($('div#helpModal').hasClass('show')) $('#closeHelp').click();
+		if($('div#showModal').hasClass('show')) $('#closeShow').click();
+		if($('div#runModal').hasClass('show')) $('#closeRun').click();
+		if($('div#surveyModal').hasClass('show')) $('#closeSurvey').click();
+		if($('div#futureModal').hasClass('show')) $('#closeFuture').click();
+		if($('div#aboutModal').hasClass('show')) $('#closeAbout').click();
+	}
+	
+	">
+		
+		<div id="mainwrapper">
+			
+			<!-- main container -->
+			<div id="header">
+				
+				<!-- page title -->
+				<div>
+					<h1>iGaME Web Preview: GEM From Scratch</h1>
+				</div>
+				
+				<!-- left sidebar -->
+				<div id="leftbar" style="position: absolute; top: 100px; color: white; font-size: 13px;">
+					<div>
+						<img src="_images/ustc_software.png" alt="" />
+					</div>
+					
+					<div style="font-size: 16px; font-weight: bold; font-variant: small-caps;">
+						iGaME Web Preview:
+					</div>
+					
+					<div style="font-size: 14px; font-weight: bold; font-variant: small-caps;">
+						GEM From Scratch <br/><br/>
+					</div>
+					
+					<div>
+						iGEM 2010 USTC Software <br/><br/>
+						last updated in <span style="font-style: italic;">08/16/2010</span> <br/>
+						this is a <br/>
+						<span style="color: red; font-weight: bold;">{"VERSION" : "ALPHA"}</span> <br/>
+						release. <br/>
+						please send us feedback: <br/>
+						<u>MORT DOT YAO<br/>AT GMAIL DOT COM</u> <br/><br/><br/>
+					</div>
+					
+					<div style="font-size: 16px; font-weight: bold; font-variant: small-caps;">
+						Score: <br/>
+					</div>
+					<div style="font-size: 24px; font-weight: bold; font-variant: small-caps;">
+						<span id="score">0</span> <br/><br/>
+					</div>
+					
+					<div style="font-size: 16px; font-weight: bold; font-variant: small-caps;">
+						Level <span id="level">1 - 1</span> <br/><br/>
+					</div>
+					
+					<div style="font-size: 16px; font-weight: bold; font-variant: small-caps;">
+						Mission Briefing: <br/>
+					</div>
+					<div>
+						<span id="mission">-</span>
+					</div>
+					
+					<script type="text/javascript">
+						
+						document.getElementById("mission").innerHTML = Level_Name + "<br/>" + Level_Description;
+						
+					</script>
+					
+				</div>
+				
+				<!-- jamboree countdown -->
+				<div id="countdown" style="width:200px; margin:0 auto; z-index:10;">
+					<embed width="100%" height="40" wmode="transparent"
+					pluginspage="http://www.macromedia.com/go/getflashplayer"
+					type="application/x-shockwave-flash"
+					src="http://www.oneplusyou.com/bb/files/countdown/countdown.swf?co=FFFFFF&amp;bgcolor=FFFFFF&amp;date_month=11&amp;date_day=05&amp;date_year=10&amp;un=IGEM JAMBOREE 2010&amp;size=normal&amp;mo=11&amp;da=05&amp;yr=2010"/>
+				</div>
+				
+				<!-- blackboard -->
+				<div id="blackboard">
+				</div>
+				
+				<!-- parts index -->
+				<div class="container">
+					
+					<div id="main_view">
+						<a href="http://igem.ustc.edu.cn" title="iGEM 2010 USTC Software" target="_blank">
+							<img src="_images/part1_full.jpg" alt="" />
+						</a>
+						<br/>
+					</div>
+					
+					<div>
+						<ul class="thumb">
+							<li>
+								<a href="_images/part1_full.jpg" id="promoters" title="Promoters" 
+								onClick="changeParts('1');">
+									<img src="_images/part1.jpg" alt="Promoters">
+								</a>
+							</li>
+							
+							<li>
+								<a href="_images/part2_full.jpg" title="Ribosome Binding Sites"
+								onClick="changeParts('2');">
+									<img src="_images/part2.jpg" alt="Ribosome Binding Sites" />
+								</a>
+							</li>
+							
+							<li>
+								<a href="_images/part3_full.jpg" title="Terminators"
+								onClick="changeParts('3');">
+									<img src="_images/part3.jpg" alt="Terminators" />
+								</a>
+							</li>
+							
+							<li>
+								<a href="_images/part4_full.jpg" title="Protein domains"
+								onClick="changeParts('4');">
+									<img src="_images/part4.jpg" alt="Protein domains" />
+								</a>
+							</li>
+							
+							<li>
+								<a href="_images/part5_full.jpg" title="Protein coding sequences"
+								onClick="changeParts('5');">
+									<img src="_images/part5.jpg" alt="Protein coding sequences" />
+								</a>
+							</li>
+							
+							<li>
+								<a href="_images/part6_full.jpg" title="Translational units"
+								onClick="changeParts('6');">
+									<img src="_images/part6.jpg" alt="Translational units" />
+								</a>
+							</li>
+							
+							<li>
+								<a href="_images/part7_full.jpg" title="DNA"
+								onClick="changeParts('7');">
+									<img src="_images/part7.jpg" alt="DNA" />
+								</a>
+							</li>
+							
+							<li>
+								<a href="_images/part8_full.jpg" title="Primers"
+								onClick="changeParts('8');">
+									<img src="_images/part8.jpg" alt="Primers" />
+								</a>
+							</li>
+							
+							<li>
+								<a href="_images/part9_full.jpg" title="Composite parts"
+								onClick="changeParts('9');">
+									<img src="_images/part9.jpg" alt="Composite parts" />
+								</a>
+							</li>
+							
+						</ul>
+					</div>
+					
+				</div>
+				
+				<!-- parts table -->
+				<div id="parts">
+					
+					<table class="partsTable">
+						
+						<thead>
+							<tr>
+								<th>Workbench</th>
+								<th>Repository</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							<tr>
+								
+								<td id="workspace" class="partsList">
+								</td>
+								
+								<td id="repository" class="partsList">
+									
+									<script type="text/javascript">
+										
+										for(n = 1; n <= 8 * 9; n++)
+											document.write("<a href='#' id='p" + n + "' draggable='true' style='height: 0; padding: 0; '></a>");
+										
+										changeParts(1);
+										
+									</script>
+									
+								</td>
+								
+							</tr>
+						</tbody>
+						
+						<tfoot>
+							<td id="workspaceHelp">
+								Drag a part from repository and drop it here to add it to your machine.
+							</td>
+							
+							<td id="repositoryHelp">
+								Drag a part from workbench and drop it here to remove it from your machine.
+							</td>
+							
+						</tfoot>
+						
+					</table>
+					
+                </div>
+				
+			</div>
+			
+			<!-- navigation container -->
+			<div id="nav">
+				
+				<div>
+					<a href="#" title="Quick Start Tutorial" id="showHelp"
+					style="position: relative; left: 375px;"
+					OnMouseOver="$('#help').css('background-image','url(_images/n1_over.png)');"
+					onMouseOut="$('#help').css('background-image','url(_images/n1.png)');">
+						<img class="logo" id="help" src="_images/n1.png" alt="Help" />
+					</a>
+					
+					<a href="#" title="Clear Workbench" id="showClear"
+					style="position: relative; left: 385px;"
+					OnMouseOver="$('#clear').css('background-image','url(_images/n2_over.png)');"
+					onMouseOut="$('#clear').css('background-image','url(_images/n2.png)');">
+						<img class="logo" id="clear" src="_images/n2.png" alt="Clear" />
+					</a>
+					
+					<a href="#" title="Show GEM Details" id="showShow"
+					style="position: relative; left: 395px;"
+					OnMouseOver="$('#show').css('background-image','url(_images/n3_over.png)');"
+					onMouseOut="$('#show').css('background-image','url(_images/n3.png)');">
+						<img class="logo" id="show" src="_images/n3.png" alt="Show" />
+					</a>
+					
+					<a href="#" title="Run Your GEM!" id="showRun"
+					style="position: relative; left: 405px;"
+					OnMouseOver="$('#run').css('background-image','url(_images/n4_over.png)');"
+					onMouseOut="$('#run').css('background-image','url(_images/n4.png)');">
+						<img class="logo" id="run" src="_images/n4.png" alt="Run" />
+					</a>
+					
+				</div>
+				
+			</div>
+			
+			<!-- menu container -->
+			<div id="menu">
+				
+				Copyright (c) 2010 iGEM USTC Software Team
+				
+				<!-- main menu -->
+				<div id="outerContainer">
+					<div id="imageScroller">
+						<div id="viewer" class="js-disabled">
+							
+							<a class="wrapper" href="#" title="Restart Game">
+								<img class="logo" id="showRestart" src="_images/m1.png" alt="Restart Game" />
+							</a>
+							
+							<a class="wrapper" href="#" title="Project iGaME">
+								<img class="logo" id="showSurvey" src="_images/m2.png" alt="Project iGaME" />
+							</a>
+							
+							<a class="wrapper" href="#" title="Future Development">
+								<img class="logo" id="showFuture" src="_images/m3.png" alt="Future Development" />
+							</a>
+							
+							<a class="wrapper" href="#" title="About Us">
+								<img class="logo" id="showAbout" src="_images/m4.png" alt="About Us" />
+							</a>
+							
+							<a class="wrapper" href="#" title="Exit">
+								<img class="logo" id="showExit" src="_images/m5.png" alt="Exit" />
+							</a>
+							
+						</div>
+					</div>
+				</div>
+		
+			</div>
+			
+		</div>
+		
+		<!-- help modal window -->
+		<div id="helpModal" class="modal">
+			
+			<h3>Quick Start Tutorial</h3>
+			
+			<p>Learn how to play the game!</p>
+			
+			<img src="_images/qst.png" />
+			<br/><br/>
+			
+			<a href="#" id="closeHelp" style="float: right;">
+				<span style="background-color: #909090; border: solid 2px black; padding: 5px">OK</span>
+			</a>
+			
+		</div>
+		
+		<!-- show modal window -->
+		<div id="showModal" class="modal">
+			
+			<h3>Details of GEM (Genetically Engineered Machine)</h3>
+			
+			<p>Engineering Bacteria:</p>
+			
+			<div style="font-style: italic;">Escherichia coli</div>
+			
+			<p>Using Parts:</p>
+			
+			<a href="#" id="closeShow" style="float: right;">
+				<span style="background-color: #909090; border: solid 2px black; padding: 5px">OK</span>
+			</a>
+			
+		</div>
+		
+		<!-- run modal window -->
+		<div id="runModal" class="modal">
+			
+			<h3>Lab Result</h3>
+			
+			<div id="labTitle">
+				It seems that your GEM did not work well.
+				Try to improve your design, good luck!
+			</div>
+			
+			<div id="labImg">
+				<img src="_images/result_bad.png" /><br/>
+			</div>
+			
+			<a href="#" id="closeRun" style="float: right;">
+				<span style="background-color: #909090; border: solid 2px black; padding: 5px">OK</span>
+			</a>
+			
+		</div>
+		
+		
+		
+		<!-- restart modal window -->
+		<div id="restartModal" class="modal">
+			
+			<h3>Welcome to the world of Synthetic Biology!</h3>
+				
+			<div style="font-size: 12px;">
+				<img src="_images/igame.png" />
+				
+				is an open source game project devoted to pushing forward the general public's consciousness
+				of up-and-coming biotechnological research and industry in the field of synthetic biology.
+				
+				<p>The project is also being developed as a part of a 2010 iGEM competition soft track 
+				by USTC software team.
+				</p>
+				
+				<p>The web game, <b>GEM</b> (stands for <i>Genetically Engineered Machine / Microorganisms</i>)
+				<b>From Scratch</b>, is a prototype written in HTML, CSS and JavaScript and released
+				as a preview for anyone who has interest in our idea of syn bio educational games.
+				</p>
+				
+				<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">
+					<img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" />
+				</a>
+				<br/>
+				This web application is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
+				
+				<br/><br/>
+				
+			</div>
+			
+			<a href="#" id="closeRestart" style="float: right;">
+				<span style="background-color: #909090; border: solid 2px black; padding: 5px">Get Started</span>
+			</a>
+			<br/>
+			
+			<!--
+			使用中文吗？请访问
+			<br/>
+			<a href="index_zh.html" id="langZh" style="float: left;">
+				<img src="_images/chinese.jpg" />
+			</a>
+			-->
+			
+		</div>
+		
+		<!-- survey modal window -->
+		<div id="surveyModal" class="modal">
+			
+			<h3>Project iGaME</h3>
+			
+			<p>
+			</p>
+			
+			<a href="#" id="closeSurvey" style="float: right;">
+				<span style="background-color: #909090; border: solid 2px black; padding: 5px">OK</span>
+			</a>
+			
+		</div>
+		
+		<!-- future modal window -->
+		<div id="futureModal" class="modal">
+		
+			<h3>Future Development</h3>
+			
+			<p>
+			</p>
+			
+			<a href="#" id="closeFuture" style="float: right;">
+				<span style="background-color: #909090; border: solid 2px black; padding: 5px">OK</span>
+			</a>
+			
+		</div>
+		
+		<!-- about modal window -->
+		<div id="aboutModal" class="modal">
+			
+			<h3>About Us</h3>
+			
+			<div style="text-align: center; font-size: 24px; font-weight: bold; font-variant: small-caps;">
+				iGaME Web Preview:
+			</div>
+			
+			<div style="text-align: center; font-size: 20px; font-weight: bold; font-variant: small-caps;">
+				GEM From Scratch <br/><br/>
+			</div>
+			
+			<br/>
+			Version: 08/16/2010 alpha <br/>
+			Author: Mort Yao <br/><br/>
+			
+			iGEM 2010 USTC Software <br/>
+			Team Members: <br/><br/>
+			
+			Contact / Join Us: <u>MORT DOT YAO AT GMAIL DOT COM</u><br/><br/>
+			
+			Thanks to: <br/><br/>
+			
+			<a href="#" id="closeAbout" style="float: right;">
+				<span style="background-color: #909090; border: solid 2px black; padding: 5px">OK</span>
+			</a>
+			
+		</div>
+		
+		
+		
+		<!-- light off mask -->
+		<div id="lightOff"></div>
+		
+	</body>
+	 
+</html>

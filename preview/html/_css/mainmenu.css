@@ -1,0 +1,16 @@
+/* js-disabled class - set image sizes so they all fit in the viewer */
+.js-disabled img { width:100px; height:100px; display:block; float:left; margin:30px 0 0; }
+
+#outerContainer { width:542px; height:101px; margin:auto; position:relative; }
+#imageScroller { width:542px; height:101px; position:relative; background:#000000 url(../_images/imageScrollerBG.png) no-repeat; }
+#viewer { width:522px; height:91px; overflow:hidden; margin:auto; position:relative; top:10px; }
+#imageScroller a:active, #imageScroller a:visited { color:#000000; }
+#imageScroller a img { border:0; }
+#controls { width:534px; height:47px; background:url(../_images/controlsBG.png) no-repeat; position:absolute; top:4px; left:4px; z-index:10; }
+#controls a { width:37px; height:35px; position:absolute; top:3px; }
+#controls a:active, #controls a:visited { color:#0d0d0d; }
+#title { color:#ffffff; font-family:arial; font-size:100%; font-weight:bold; width:100%; text-align:center; margin-top:10px; }
+#rtl { background:url(../_images/rtl.png) no-repeat; left:100px; }
+#rtl:hover { background:url(../_images/rtl_over.png) no-repeat; left:99px; }
+#ltr { background:url(../_images/ltr.png) no-repeat; right:100px; }
+#ltr:hover { background:url(../_images/ltr_over.png) no-repeat; }
